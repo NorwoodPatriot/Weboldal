@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,7 @@ html {
     min-height: 100vh;
 }
 p{
-    font-size: 20px;
+    font-size: 100%;
     margin: 0 auto;
 
 }
@@ -22,6 +21,11 @@ nav {
     background-color: rgba(32, 0, 44, 0.9);
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav a {
@@ -44,6 +48,7 @@ h1 {
 }
 
 table {
+    border: 2px black;
     margin: 20px auto;
     width: 60%;
     table-layout: fixed;
@@ -51,6 +56,7 @@ table {
 
 td {
     width: 50%;
+    border: 2px black;
     padding: 10px;
 }
 
@@ -82,4 +88,22 @@ a {
 a:hover {
     background-color: #cbb4d4;
     color: #ffffff;
+}
+
+#mainkép{
+    width: 30%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease;
+    border-radius: 15px;
+}
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Mobil nézetben egy oszlopban legyenek */
+        align-items: center; /* Középre igazítja a tartalmat */
+    }
+
+
+
+
 }
