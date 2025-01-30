@@ -4,7 +4,7 @@ function rearrangeTable() {
 
     table.innerHTML = "";
 
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1024) {
 
         originalRows.forEach(row => {
             const cells = Array.from(row.querySelectorAll("td"));
