@@ -1,4 +1,4 @@
-/* styles.css */
+/* styles.css - Complete Version */
 :root {
     --primary-color: #6D4C41;
     --secondary-color: #A1887F;
@@ -167,23 +167,22 @@ h2 {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Add this to your styles.css file */
 .project-header {
     padding: 1.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--dark-color)); /* Darker gradient */
-    color: var(--light-color); /* Light text color */
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+    color: var(--light-color);
     position: relative;
     overflow: hidden;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .project-title {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     position: relative;
-    color: white !important; /* Force white color */
-    font-weight: 600; /* Slightly bolder */
-    letter-spacing: 0.5px; /* Better letter spacing */
+    color: white !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .project-header::before {
@@ -195,7 +194,7 @@ h2 {
     height: 200%;
     background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
     transform: rotate(30deg);
-    opacity: 0.6; /* More visible overlay */
+    opacity: 0.6;
 }
 
 .project-images {
@@ -211,6 +210,7 @@ h2 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    height: auto;
 }
 
 .project-images img:hover {
@@ -229,7 +229,7 @@ h2 {
     line-height: 1.7;
 }
 
-/* Improved download button styles */
+/* Download button styles */
 .download-container {
     text-align: center;
     margin-top: 1.5rem;
@@ -295,8 +295,8 @@ footer p {
     }
 
     .profile-image {
-        max-width: 100%;
-        margin-bottom: 2rem;
+        max-width: 60%;
+        margin: 0 auto 2rem;
     }
 
     nav {
@@ -313,12 +313,12 @@ footer p {
 
 @media (max-width: 768px) {
     .project-images {
-        grid-template-columns: 1fr;
-        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 1.5rem;
     }
 
     .container {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
     }
 
     .project-content {
@@ -326,15 +326,43 @@ footer p {
     }
 
     .download-btn {
-        width: 100%;
-        padding: 0.8rem;
+        width: auto;
+        padding: 0.8rem 1.5rem;
     }
 
     h1 {
         font-size: 2.2rem;
     }
 
+    h2 {
+        font-size: 1.8rem;
+    }
+
     .project-title {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        max-width: 80%;
+    }
+
+    .project-images {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .project-images img {
+        max-width: 100%;
+        height: auto;
     }
 }
