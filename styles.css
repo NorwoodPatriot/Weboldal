@@ -1,0 +1,340 @@
+/* styles.css */
+:root {
+    --primary-color: #6D4C41;
+    --secondary-color: #A1887F;
+    --accent-color: #D7CCC8;
+    --light-color: #EFEBE9;
+    --dark-color: #3E2723;
+    --text-color: #5D4037;
+    --text-light: #8D6E63;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #FFF8F5;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.05) 1px, transparent 0);
+    background-size: 20px 20px;
+}
+
+nav {
+    background-color: var(--dark-color);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    color: var(--light-color);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    color: var(--dark-color);
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Profile section styles */
+.profile-section {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 3rem;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--accent-color);
+}
+
+.profile-image {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.03);
+}
+
+.profile-content {
+    flex: 2;
+}
+
+.profile-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.education-item {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.education-item p:first-child {
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 2rem 0;
+}
+
+.skill {
+    background-color: var(--light-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+    border: 1px solid var(--secondary-color);
+}
+
+/* Project card styles */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Add this to your styles.css file */
+.project-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-color)); /* Darker gradient */
+    color: var(--light-color); /* Light text color */
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
+}
+
+.project-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    color: white !important; /* Force white color */
+    font-weight: 600; /* Slightly bolder */
+    letter-spacing: 0.5px; /* Better letter spacing */
+}
+
+.project-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+    opacity: 0.6; /* More visible overlay */
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.project-images img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.project-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-content {
+    padding: 0 2rem 2rem;
+}
+
+.project-description {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* Improved download button styles */
+.download-container {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), #FF8E8E);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    min-width: 200px;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #FF5757, var(--primary-color));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.tech-item {
+    background-color: var(--light-color);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: var(--dark-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .profile-section {
+        flex-direction: column;
+    }
+
+    .profile-image {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-images {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .project-content {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .download-btn {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+}

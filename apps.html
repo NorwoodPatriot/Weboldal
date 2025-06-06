@@ -1,58 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Projektek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektek - Portfólió</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modal stílusok */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <nav>
-    <a href="index.html">Kezdőlap</a>
-    <a href="apps.html">Projektek</a>
+
+    <div class="nav-links">
+        <a href="index.html"><i class="fas fa-home"></i> Kezdőlap</a>
+        <a href="apps.html"><i class="fas fa-code"></i> Projektek</a>
+    </div>
 </nav>
-<h1>Fezzo The Game</h1>
-<table>
-    <tr>
-        <td><img src="kepek/image3.png" alt="fezzo"></td>
-        <td><img src="kepek/image2.png" alt="fezzo2"></td>
-    </tr>
-    <tr>
-        <td colspan="2"><img src="kepek/image.png" alt="fezzo3"></td>
-    </tr>
-</table>
-<p style="width: 50%; font-size: 120%">Fezzo The Game egy vizuális novella paródia,
-    amelyben népszerű internetes személyiségek szerepelnek. A játékban egy alapvető harcrendszer található,
-    valamint egy bal klikkel vezérelhető, lineáris párbeszéd-rendszer, amely a történet előrehaladását segíti.</p>
 
-<br>
-<a href="https://drive.google.com/file/d/157761mBSK27T1XgwCcKIEAi3MNNX91Oh/view?usp=drive_link" target="_blank">Letöltés</a>
-<br>
-<h1>Zh Applikáció</h1>
-<table>
-<tr>
-    <td><img src="kepek/elso.jpg" alt="ZH App kep"></td>
-    <td><img src="kepek/masodik.jpg" alt="ZH App kep"></td>
-    <td><img src="kepek/harmadik.jpg" alt="ZH App kep"></td>
-</tr>
-</table>
-<p style="width: 50%; font-size: 120%">Ez egy ZH felvevő mobil alkalmazás (v1.2)</p>
-<br>
-<a href="https://drive.google.com/file/d/1R8yvJOELyCOxOP1KYVz95oRcx6Chk1H5/view?usp=sharing" target="_blank">Letöltés</a>
-<br>
-<h1>Edzés és életvitel Applikáció</h1>
-<table>
-    <tr>
-        <td><img src="kepek/EdzesEsEtrendAppMenu.JPG" alt="Edzes kep"></td>
-        <td><img src="kepek/EdzesEsEtrendAppEtrend.JPG" alt="Edzes kep"></td>
-        <td><img src="kepek/EdzesEsEtrendAppEdzesEsz.JPG" alt="Edzes kep"></td>
-        <td><img src="kepek/EdzesEsEtrendAppEdzesEszN.JPG" alt="Edzes kep"></td>
-    </tr>
-</table>
-<p style="width: 50%; font-size: 120%">Egyszerű és személyre szabott étrendkövetés, étkezési naplózás, egészséges életmód támogatása.</p>
-<a href="https://drive.google.com/file/d/1_Tm63tLtKpV50qNHgODRlnB8yXGYBpt1/view?usp=sharing" target="_blank">Letöltés</a>
+<div class="container">
+    <h1>Projektjeim</h1>
+
+    <!-- Fezzo The Game -->
+    <div class="project-card">
+        <div class="project-header">
+            <h2 class="project-title">Fezzo The Game</h2>
+        </div>
+        <div class="project-images">
+            <img src="kepek/image3.png" alt="Fezzo The Game képernyőkép 1">
+            <img src="kepek/image2.png" alt="Fezzo The Game képernyőkép 2">
+            <img src="kepek/image.png" alt="Fezzo The Game képernyőkép 3">
+        </div>
+        <div class="project-content">
+            <div class="tech-stack">
+                <span class="tech-item">Visual Novel</span>
+                <span class="tech-item">Párbeszéd-rendszer</span>
+                <span class="tech-item">Harcrendszer</span>
+                <span class="tech-item">Játékfejlesztés</span>
+            </div>
+            <p class="project-description">
+                Fezzo The Game egy vizuális novella paródia, amelyben népszerű internetes személyiségek szerepelnek.
+                A játékban egy alapvető harcrendszer található, valamint egy bal klikkel vezérelhető, lineáris párbeszéd-rendszer,
+                amely a történet előrehaladását segíti. A projekt célja egy szórakoztató, humoros élmény nyújtása a játékosoknak.
+            </p>
+            <div class="download-container">
+                <a href="https://drive.google.com/file/d/157761mBSK27T1XgwCcKIEAi3MNNX91Oh/view?usp=drive_link"
+                   class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> Letöltés
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ZH Applikáció -->
+    <div class="project-card">
+        <div class="project-header">
+            <h2 class="project-title">ZH Applikáció</h2>
+        </div>
+        <div class="project-images">
+            <img src="kepek/elso.jpg" alt="ZH App képernyőkép 1">
+            <img src="kepek/masodik.jpg" alt="ZH App képernyőkép 2">
+            <img src="kepek/harmadik.jpg" alt="ZH App képernyőkép 3">
+        </div>
+        <div class="project-content">
+            <div class="tech-stack">
+                <span class="tech-item">Mobil alkalmazás</span>
+                <span class="tech-item">Android</span>
+                <span class="tech-item">Tanulói eszköz</span>
+                <span class="tech-item">v1.2</span>
+            </div>
+            <p class="project-description">
+                Ez egy ZH felvevő mobil alkalmazás (v1.2), amely segít a diákoknak nyomon követni a ZH időpontjaikat és
+                felkészülni a vizsgákra. Az alkalmazás intuitív felülettel rendelkezik, lehetővé teszi a tárgyak és vizsgák
+                könnyű hozzáadását, valamint értesítéseket küld a közelgő határidőkről.
+            </p>
+            <div class="download-container">
+                <a href="https://drive.google.com/file/d/1R8yvJOELyCOxOP1KYVz95oRcx6Chk1H5/view?usp=sharing"
+                   class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> Letöltés
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edzés és életvitel Applikáció -->
+    <div class="project-card">
+        <div class="project-header">
+            <h2 class="project-title">Edzés és életvitel Applikáció</h2>
+        </div>
+        <div class="project-images">
+            <img src="kepek/EdzesEsEtrendAppEtrend.JPG" alt="Edzés App képernyőkép 2">
+            <img src="kepek/EdzesEsEtrendAppEdzesEsz.JPG" alt="Edzés App képernyőkép 3">
+            <img src="kepek/EdzesEsEtrendAppEdzesEszN.JPG" alt="Edzés App képernyőkép 4">
+        </div>
+        <div class="project-content">
+            <div class="tech-stack">
+                <span class="tech-item">Egészség</span>
+                <span class="tech-item">Étrend</span>
+                <span class="tech-item">Edzésnapló</span>
+                <span class="tech-item">Wellness</span>
+            </div>
+            <p class="project-description">
+                Egyszerű és személyre szabott étrendkövetés, étkezési naplózás, egészséges életmód támogatása.
+                Az alkalmazás segít nyomon követni a napi edzéseket, étrendet és egészségügyi mutatókat.
+                Különféle funkciók között megtalálható az edzéstervek létrehozása, étkezések naplózása,
+                vízfogyasztás követése és testi adatok rögzítése.
+            </p>
+            <div class="download-container">
+                <a href="https://drive.google.com/file/d/1_Tm63tLtKpV50qNHgODRlnB8yXGYBpt1/view?usp=sharing"
+                   class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> Letöltés
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
 
+<script>
+    // Modal megvalósítás
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = document.getElementsByClassName('close')[0];
 
+    document.querySelectorAll('.project-images img').forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+        });
+    });
+
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
 </body>
 </html>
