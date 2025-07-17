@@ -4,53 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="kepek/User_icon_2.svg.png" type="image/x-icon">
     <title>Kezdőlap - Neiser Máté</title>
 </head>
 <body>
-<nav>
-    <a href="index.html"><i class="fas fa-home"></i> Kezdőlap</a>
-    <a href="apps.html"><i class="fas fa-code"></i> Projektek</a>
+<nav class="animate__animated animate__fadeInDown">
+    <div class="nav-container">
+
+        <div class="nav-social">
+            <a target="_blank" href="https://github.com/NorwoodPatriot"><i class="fab fa-github"></i></a>
+            <a href="apps.html"><i>Projektek</i> </a>
+        </div>
+    </div>
 </nav>
 
+<div class="hero animate__animated animate__fadeIn">
+    <div class="hero-content">
+        <h1 class="animate__animated animate__fadeInUp">Üdvözöllek az oldalamon</h1>
+        <h2 class="animate__animated animate__fadeInUp animate__delay-1s">Neiser Máté</h2>
+        <p class="animate__animated animate__fadeInUp animate__delay-2s">Programtervező informatikus hallgató</p>
+    </div>
+</div>
+
 <div class="container">
-    <h1>Üdvözöllek az oldalamon</h1>
-    <h2>Neiser Máté</h2>
-
     <div class="profile-section">
-        <div class="profile-image">
+        <div class="profile-image animate__animated animate__fadeInLeft">
             <img src="kepek/1738252683682.jpg" alt="Neiser Máté profilképe">
+            <div class="image-placeholders">
+                <div class="placeholder-img animate__animated" data-animation="animate__fadeIn">
+                    <img src="kepek/projekt1.2.png" alt="Fezzo The Game">
+                </div>
+                <div class="placeholder-img animate__animated" data-animation="animate__fadeIn">
+                    <img src="kepek/image2.png" alt="Fezzo The Game">
+                </div>
+            </div>
         </div>
+
         <div class="profile-content">
-            <div class="education-item">
-                <p>Képzés</p>
-                <p>Programtervező informatikus BSc, Szegedi Tudományegyetem</p>
-            </div>
+            <section class="education animate__animated">
+                <div class="education-item">
+                    <h3><i class="fas fa-graduation-cap"></i> Jelenlegi képzés</h3>
+                    <p>Programtervező informatikus BSc</p>
+                    <p>Szegedi Tudományegyetem</p>
+                </div>
 
-            <div class="education-item">
-                <p>Korábbi iskola</p>
-                <p>Bánki Donát Technikum, Informatikai szakirány</p>
-            </div>
+                <div class="education-item">
+                    <h3><i class="fas fa-school"></i> Korábbi iskola</h3>
+                    <p>Bánki Donát Technikum</p>
+                    <p>Informatikai szakirány</p>
+                </div>
+            </section>
 
-            <p>Számomra a programozás mindig is egy izgalmas kihívás volt, és ennek megfelelően választottam a Programtervező informatikus BSc képzést a Szegedi Tudományegyetemen. A Bánki Donát Technikumban kezdtem el informatikai tanulmányaimat, ahol megalapozhattam tudásomat a különböző programozási nyelvekben és az informatika világában. Jelenleg is folyamatosan bővítem ismereteimet, és szeretek új technológiákra is rálátást nyerni.</p>
+            <section class="about animate__animated">
+                <p>Számomra a programozás mindig is egy izgalmas kihívás volt, és ennek megfelelően választottam a Programtervező informatikus BSc képzést a Szegedi Tudományegyetemen. A Bánki Donát Technikumban kezdtem el informatikai tanulmányaimat, ahol megalapozhattam tudásomat a különböző programozási nyelvekben és az informatika világában. Jelenleg is folyamatosan bővítem ismereteimet, és szeretek új technológiákra is rálátást nyerni.</p>
+            </section>
 
-            <div class="skills">
-                <span class="skill">C#</span>
-                <span class="skill">PHP</span>
-                <span class="skill">C</span>
-                <span class="skill">Python</span>
-                <span class="skill">Java</span>
-                <span class="skill">JavaScript</span>
-                <span class="skill">HTML/CSS</span>
-                <span class="skill">SQL(PostgreSQL, phpMyAdmin)</span>
-            </div>
+            <section class="skills animate__animated">
+                <h3><i class="fas fa-code"></i> Technológiai ismeretek</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-microsoft"></i>
+                        <span>C#</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-copyright"></i>
+                        <span>C</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5/CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>SQL</span>
+                    </div>
+                </div>
+            </section>
 
-            <p>Képes vagyok C#, PHP, C, Python, Java, Javascript, HTML és CSS nyelveken programozni, valamint SQL-ben is jártas vagyok, PostgreSQL és phpMyAdmin segítségével dolgozva adatbázisokkal. Ezen kívül érdekelnek a szoftverfejlesztés különböző aspektusai, így a jövőben szeretnék elmélyülni a játék- és applikációfejlesztésben, valamint más fejlesztési területeken is tapasztalatot szerezni.</p>
+            <section class="goals animate__animated">
+                <p>Képes vagyok C#, PHP, C, Python, Java, Javascript, HTML és CSS nyelveken programozni, valamint SQL-ben is jártas vagyok, PostgreSQL és phpMyAdmin segítségével dolgozva adatbázisokkal. Ezen kívül érdekelnek a szoftverfejlesztés különböző aspektusai, így a jövőben szeretnék elmélyülni a játék- és applikációfejlesztésben, valamint más fejlesztési területeken is tapasztalatot szerezni.</p>
 
-            <p>Mindig is érdeklődtem a problémamegoldás iránt, és örömmel veszem, ha új kihívások elé állíthatom magam a programozás terén.</p>
+                <p>Mindig is érdeklődtem a problémamegoldás iránt, és örömmel veszem, ha új kihívások elé állíthatom magam a programozás terén.</p>
+            </section>
         </div>
     </div>
 </div>
+
+<div class="gallery animate__animated">
+    <h3><i class="fas fa-images"></i> Projekt képek</h3>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="kepek/projekt1.png" alt="Aradi Vértanúk tere">
+            <div class="image-caption">Fezzo The Game</div>
+        </div>
+        <div class="gallery-item">
+            <img src="kepek/projekt2.jpg" alt="ZH Adatfelvételi Segéd">
+            <div class="image-caption">ZH Adatfelvételi Segéd</div>
+        </div>
+        <div class="gallery-item">
+            <img src="kepek/projekt3.JPG" alt="Edzésterv">
+            <div class="image-caption">Edzésterv</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Neiser Máté</p>
+        <!-- <div class="footer-social">
+            <a href="https://github.com/NorwoodPatriot"><i class="fab fa-github"></i></a>
+        </div> -->
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
