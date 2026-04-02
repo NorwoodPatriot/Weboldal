@@ -1,130 +1,65 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Scroll animation for sections
-    const animateOnScroll = function() {
-        const sections = document.querySelectorAll('section, .gallery');
+document.addEventListener('DOMContentLoaded', () => {
 
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
+    // 1. Fejléc stílusának változtatása görgetéskor (Glassmorphism effekt erősítése)
+    const header = document.getElementById('main-header');
 
-            if (sectionTop < windowHeight * 0.75) {
-                section.classList.add('visible');
-            }
-        });
-    };
-
-    // Run once on load
-    animateOnScroll();
-
-    // Run on scroll
-    window.addEventListener('scroll', animateOnScroll);
-
-    // Animate placeholder images
-    const placeholderImages = document.querySelectorAll('.placeholder-img');
-
-    placeholderImages.forEach((img, index) => {
-        setTimeout(() => {
-            img.classList.add(img.dataset.animation);
-        }, index * 200);
-    });
-
-    // Smooth scrolling for navigation
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            if (this.getAttribute('href').startsWith('#')) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
-
-// Lightbox hozzáadása
-document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', function() {
-        const lightbox = document.createElement('div');
-        lightbox.style.position = 'fixed';
-        lightbox.style.top = '0';
-        lightbox.style.left = '0';
-        lightbox.style.width = '100%';
-        lightbox.style.height = '100%';
-        lightbox.style.backgroundColor = 'rgba(0,0,0,0.9)';
-        lightbox.style.display = 'flex';
-        lightbox.style.alignItems = 'center';
-        lightbox.style.justifyContent = 'center';
-        lightbox.style.zIndex = '1000';
-
-        const fullImg = document.createElement('img');
-        fullImg.src = this.src;
-        fullImg.style.maxWidth = '90%';
-        fullImg.style.maxHeight = '90%';
-        fullImg.style.objectFit = 'contain';
-
-        lightbox.appendChild(fullImg);
-        document.body.appendChild(lightbox);
-
-        lightbox.addEventListener('click', () => {
-            document.body.removeChild(lightbox);
-        });
-    });
-});
-
-
-// Nav link animation
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    navLinks.forEach(link => {
-        link.style.opacity = '1';
-        link.style.transform = 'translateY(0)';
-    });
-
-    // Scroll animation for project cards
-    const animateOnScroll = function() {
-        const projectCards = document.querySelectorAll('.project-card');
-
-        projectCards.forEach(card => {
-            const cardTop = card.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-
-            if (cardTop < windowHeight * 0.75) {
-                card.classList.add('visible');
-            }
-        });
-    };
-
-    // Run once on load
-    animateOnScroll();
-
-    // Run on scroll
-    window.addEventListener('scroll', animateOnScroll);
-
-    // Modal functionality
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    const closeBtn = document.getElementsByClassName('close')[0];
-
-    document.querySelectorAll('.project-images img').forEach(img => {
-        img.style.cursor = 'pointer';
-        img.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    closeBtn.onclick = function() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
-    }
+    });
+
+    // 2. Sima görgetés (Smooth Scroll) a navigációs linkekhez
+    const navLinks = document.querySelectorAll('nav a, .btn-primary');
+
+    navLinks.forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+
+            // Csak akkor avatkozunk be, ha belső hivatkozás (#)
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Kiszámoljuk a pozíciót a fix fejléc magasságának levonásával
+                    const headerHeight = header.offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
+    // 3. Megjelenés animálása görgetéskor (Intersection Observer API)
+    // Ez sokkal teljesítmény-barátabb, mint a scroll event listener
+    const observerOptions = {
+        threshold: 0.1, // Akkor indul az animáció, ha az elem 10%-a látható
+        rootMargin: "0px 0px -50px 0px" // Kicsit hamarabb töltődjön be, mielőtt teljesen a viewportba ér
+    };
+
+    const animateObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Ha egyszer megjelent, ne figyelje tovább (így nem animál újra, ha felfelé görget)
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Kikeressük az összes animálandó elemet
+    const elementsToAnimate = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+
+    elementsToAnimate.forEach(element => {
+        animateObserver.observe(element);
+    });
+
 });

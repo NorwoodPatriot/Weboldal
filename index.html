@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neiser Máté</title>
+    <title>Neiser Máté | Portfólió</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="kepek/User_icon_2.svg.png" type="image/x-icon">
 </head>
 <body>
-<!-- Fejléc -->
-<header>
+
+<header id="main-header">
     <div class="container">
         <div class="header-content">
-            <div class="logo">Neiser Máté
-
+            <div class="logo">
+                <a href="#home">Neiser Máté</a>
             </div>
-
             <nav>
                 <ul>
-
                     <li><a href="#profile">Profil</a></li>
                     <li><a href="#education">Képzés</a></li>
                     <li><a href="#skills">Ismeretek</a></li>
@@ -29,191 +29,145 @@
     </div>
 </header>
 
-<!-- Hero szekció -->
-<section class="hero" id="home">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Üdvözöllek az oldalamon</h1>
-            <h2>Neiser Máté</h2>
-            <p>Programtervező informatikus hallgató</p>
-        </div>
-    </div>
-</section>
-
-<!-- Profil szekció -->
-<section id="profile" class="profile-section">
-    <div class="container">
-        <div class="profile-content">
-            <div class="profile-image fade-in-left">
-                <img src="kepek/profil.jpg" alt="Neiser Máté profilképe">
-                <figcaption>Neiser Máté profilképe</figcaption>
-            </div>
-            <div class="profile-text fade-in-right">
-                <h2 class="section-title">Bemutatkozás</h2>
-                <p>Számomra a programozás mindig is egy izgalmas kihívás volt, és ennek megfelelően választottam a Programtervező informatikus BSc képzést a Szegedi Tudományegyetemen. A Bánki Donát Technikumban kezdtem el informatikai tanulmányaimat, ahol megalapozhattam tudásomat a különböző programozási nyelvekben és az informatika világában. Jelenleg is folyamatosan bővítem ismereteimet, és szeretek új technológiákra is rálátást nyerni.</p>
-                <p>Képes vagyok C#, PHP, C, Python, Java, Javascript, HTML és CSS nyelveken programozni, valamint SQL-ben is jártas vagyok, PostgreSQL és phpMyAdmin segítségével dolgozva adatbázisokkal. Ezen kívül érdekelnek a szoftverfejlesztés különböző aspektusai, így a jövőben szeretnék elmélyülni a játék- és applikációfejlesztésben, valamint más fejlesztési területeken is tapasztalatot szerezni.</p>
-                <p>Mindig is érdeklődtem a problémamegoldás iránt, és örömmel veszem, ha új kihívások elé állíthatom magam a programozás terén.</p>
+<main>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Üdvözöllek az oldalamon</h1>
+                <h2>Neiser Máté vagyok</h2>
+                <p>Programtervező informatikus hallgató & Szoftverfejlesztő</p>
+                <a href="#projects" class="btn btn-primary mt-3">Munkáim megtekintése <i class="fa-solid fa-arrow-down"></i></a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Képzés szekció -->
-<section id="education" class="education-section">
-    <div class="container">
-        <h2 class="section-title fade-in">Tanulmányok</h2>
-        <div class="education-grid">
-            <div class="education-card fade-in">
-                <h3>Jelenlegi képzés</h3>
-                <p><strong>Programtervező informatikus BSc</strong></p>
-                <p>Szegedi Tudományegyetem</p>
-            </div>
-            <div class="education-card fade-in">
-                <h3>Korábbi iskola</h3>
-                <p><strong>Bánki Donát Technikum</strong></p>
-                <p>Informatikai szakirány</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Technológiai ismeretek -->
-<section id="skills" class="skills-section">
-    <div class="container">
-        <h2 class="section-title fade-in">Technológiai ismeretek</h2>
-        <div class="skills-content">
-            <div class="skills-text fade-in-left">
-                <p>Képes vagyok C#, PHP, C, Python, Java, Javascript, HTML és CSS nyelveken programozni, valamint SQL-ben is jártas vagyok, PostgreSQL és phpMyAdmin segítségével dolgozva adatbázisokkal. Ezen kívül érdekelnek a szoftverfejlesztés különböző aspektusai, így a jövőben szeretnék elmélyülni a játék- és applikációfejlesztésben, valamint más fejlesztési területeken is tapasztalatot szerezni.</p>
-            </div>
-            <div class="skills-list fade-in-right">
-                <div class="skills-grid">
-                    <div class="skill-item">C#</div>
-                    <div class="skill-item">PHP</div>
-                    <div class="skill-item">C</div>
-                    <div class="skill-item">Python</div>
-                    <div class="skill-item">Java</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">HTML5/CSS3</div>
-                    <div class="skill-item">SQL</div>
+    <section id="profile" class="profile-section">
+        <div class="container">
+            <div class="profile-content">
+                <div class="profile-image fade-in-left">
+                    <img src="kepek/profil.jpg" alt="Neiser Máté profilképe">
+                </div>
+                <div class="profile-text fade-in-right">
+                    <h2 class="section-title">Rólam</h2>
+                    <p>Számomra a programozás mindig is egy izgalmas kihívás volt, és ennek megfelelően választottam a <strong>Programtervező informatikus BSc</strong> képzést a Szegedi Tudományegyetemen. A Bánki Donát Technikumban kezdtem el informatikai tanulmányaimat, ahol megalapozhattam tudásomat a különböző programozási nyelvekben és az informatika világában. Jelenleg is folyamatosan bővítem ismereteimet, és szeretek új technológiákra rálátást nyerni.</p>
+                    <p>Képes vagyok C#, PHP, C, Python, Java, Javascript, HTML és CSS nyelveken programozni, valamint SQL-ben is jártas vagyok (PostgreSQL, phpMyAdmin). Ezen kívül érdekelnek a szoftverfejlesztés különböző aspektusai, így a jövőben szeretnék elmélyülni a játék- és applikációfejlesztésben.</p>
+                    <p>Mindig is érdeklődött a problémamegoldás iránt, és örömmel veszem, ha új kihívások elé állíthatom magam a fejlesztés terén.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Projekt szekció -->
-<section id="projects" class="projects-section">
-    <div class="container">
-        <h2 class="section-title fade-in">Hobbi Projektjeim</h2>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-image" style="background-image: url('kepek/projekt1.2.png');"></div>
-                <div class="project-content">
-                    <h3>Fezzo The Game</h3>
-                    <p>Fezzo The Game egy vizuális novella paródia, amelyben népszerű internetes személyiségek szerepelnek. A játékban egy alapvető harcrendszer található, valamint egy bal klikkel vezérelhető, lineáris párbeszéd-rendszer, amely a történet előrehaladását segíti.</p>
-                    <div class="project-tags">
-                        <span class="tag">Visual Novel</span>
-                        <span class="tag">Párbeszéd-rendszer</span>
-                        <span class="tag">Harcrendszer</span>
-                        <span class="tag">Játékfejlesztés</span>
-                        <span class="tag">Unity</span>
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title fade-in text-center">Tanulmányok</h2>
+            <div class="education-grid">
+                <div class="education-card fade-in">
+                    <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Szegedi Tudományegyetem</h3>
+                    <p class="edu-title">Programtervező informatikus BSc</p>
+                    <p class="edu-date">Jelenlegi képzés</p>
+                </div>
+                <div class="education-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+                    <h3>Bánki Donát Technikum</h3>
+                    <p class="edu-title">Informatikai szakirány</p>
+                    <p class="edu-date">Korábbi iskola</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title fade-in text-center">Technológiai ismeretek</h2>
+            <div class="skills-content mt-4">
+                <div class="skills-list fade-in">
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-brands fa-html5" style="color: #e34c26;"></i> HTML5 / CSS3</div>
+                        <div class="skill-item"><i class="fa-brands fa-js" style="color: #f0db4f;"></i> JavaScript</div>
+                        <div class="skill-item"><i class="fa-brands fa-python" style="color: #4b8bbe;"></i> Python</div>
+                        <div class="skill-item"><i class="fa-brands fa-java" style="color: #f89820;"></i> Java</div>
+                        <div class="skill-item"><i class="fa-brands fa-php" style="color: #8993be;"></i> PHP</div>
+                        <div class="skill-item"><i class="fa-solid fa-database" style="color: #336791;"></i> SQL / PostgreSQL</div>
+                        <div class="skill-item"><i class="fa-brands fa-windows" style="color: #0078d7;"></i> C#</div>
+                        <div class="skill-item"><i class="fa-solid fa-c" style="color: #a8b9cc;"></i> C</div>
                     </div>
-                    <a href="https://drive.google.com/file/d/157761mBSK27T1XgwCcKIEAi3MNNX91Oh/view?usp=drive_link" class="btn" target="_blank">Letöltés</a>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-image" style="background-image: url('kepek/android.png');"></div>
-                <div class="project-content">
-                    <h3>ZH Applikáció</h3>
-                    <p>Ez egy ZH felvevő mobil alkalmazás (v1.2), amely segít a diákoknak nyomon követni a ZH időpontjaikat és felkészülni a vizsgákra. Az alkalmazás intuitív felülettel rendelkezik, lehetővé teszi a tárgyak és vizsgák könnyű hozzáadását.</p>
-                    <div class="project-tags">
-                        <span class="tag">Mobil alkalmazás</span>
-                        <span class="tag">Android</span>
-                        <span class="tag">Tanulói eszköz</span>
-                        <span class="tag">C#</span>
-                    </div>
-                    <a href="https://drive.google.com/file/d/1ENIad3f-cJAY2C-ZUk2B-TU-OD2EmZBE/view?usp=sharing" class="btn" target="_blank">Letöltés</a>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-image" style="background-image: url('kepek/fitness-training-311490_1280.png');"></div>
-                <div class="project-content">
-                    <h3>Edzésterv Applikáció</h3>
-                    <p>Egyszerű és személyre szabott étrendkövetés, étkezési naplózás, egészséges életmód támogatása. Az alkalmazás segít nyomon követni a napi edzéseket, étrendet és egészségügyi mutatókat.</p>
-                    <div class="project-tags">
-                        <span class="tag">Egészség</span>
-                        <span class="tag">Étrend</span>
-                        <span class="tag">Edzésnapló</span>
-                        <span class="tag">Wellness</span>
-                        <span class="tag">Android</span>
-                    </div>
-                    <a href="https://drive.google.com/file/d/1h6H0Su7tzfMkvGTGfIJ9muLYUwzKuCLi/view?usp=sharing" class="btn" target="_blank">Letöltés</a>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
-                <div class="project-content">
-                    <h3>Kosárlabda Bajnokság Weboldal</h3>
-                    <p>Egy átfogó kosárlabda bajnokság kezelő rendszer. A weboldal tartalmaz egy eredménykövető rendszert, tabellát, játékos statisztikákat, adminisztrációs oldalt és sok mást.</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">Angular</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Firebase</span>
-                    </div>
-                    <a href="https://kosarlabdabajnoksag.web.app/home" class="btn" target="_blank">Weboldal megtekintése</a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Lábléc -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title fade-in text-center">Kiemelt Projektek</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image" style="background-image: url('kepek/projekt1.2.png');"></div>
+                    <div class="project-content">
+                        <h3>Fezzo The Game</h3>
+                        <p>Egy vizuális novella paródia népszerű internetes személyiségekkel. A játék alapvető harcrendszert és lineáris párbeszéd-rendszert tartalmaz.</p>
+                        <div class="project-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">Visual Novel</span>
+                            <span class="tag">C#</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/157761mBSK27T1XgwCcKIEAi3MNNX91Oh/view?usp=drive_link" class="btn" target="_blank"><i class="fa-solid fa-download"></i> Letöltés</a>
+                    </div>
+                </div>
+                <div class="project-card fade-in" style="transition-delay: 0.1s;">
+                    <div class="project-image" style="background-image: url('kepek/android.png');"></div>
+                    <div class="project-content">
+                        <h3>ZH Applikáció</h3>
+                        <p>ZH felvevő mobil alkalmazás (v1.2), amely segít a diákoknak nyomon követni a vizsgaidőpontokat intuitív, könnyen kezelhető felületen.</p>
+                        <div class="project-tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">Mobil App</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1ENIad3f-cJAY2C-ZUk2B-TU-OD2EmZBE/view?usp=sharing" class="btn" target="_blank"><i class="fa-solid fa-download"></i> Letöltés</a>
+                    </div>
+                </div>
+                <div class="project-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="project-image" style="background-image: url('kepek/fitness-training-311490_1280.png');"></div>
+                    <div class="project-content">
+                        <h3>Edzésterv Applikáció</h3>
+                        <p>Személyre szabott étrendkövetés, étkezési naplózás és napi edzés-nyilvántartás egy átfogó egészségmegőrző applikáció keretében.</p>
+                        <div class="project-tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">Health/Wellness</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1Rk0_dCZj7UyQadRoXntWE0QV0v8GSKlo/view?usp=sharing" class="btn" target="_blank"><i class="fa-solid fa-download"></i> Letöltés</a>
+                    </div>
+                </div>
+                <div class="project-card fade-in" style="transition-delay: 0.3s;">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+                    <div class="project-content">
+                        <h3>Kosárlabda Bajnokság</h3>
+                        <p>Egy átfogó bajnokság kezelő rendszer eredménykövetővel, tabellával, játékos statisztikákkal és dedikált adminisztrációs felülettel.</p>
+                        <div class="project-tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <a href="https://kosarlabdabajnoksag.web.app/home" class="btn" target="_blank"><i class="fa-solid fa-globe"></i> Weboldal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
 <footer>
     <div class="container">
-        <p>© 2025 Neiser Máté</p>
-        <div class="copyright">
-            <a target="_blank" href="https://github.com/NorwoodPatriot">Github</a>
+        <div class="footer-content">
+            <p>© 2025 Neiser Máté | Minden jog fenntartva.</p>
+            <div class="social-links">
+                <a target="_blank" href="https://github.com/NorwoodPatriot" aria-label="GitHub Profil"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
         </div>
     </div>
 </footer>
 
-<script>
-    // Görgetés animációk
-    document.addEventListener('DOMContentLoaded', function() {
-        const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
-
-        // Intersection Observer létrehozása
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        // Observer hozzáadása minden fade elemhez
-        fadeElements.forEach(element => {
-            observer.observe(element);
-        });
-
-        // Navigáció sima görgetése
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
